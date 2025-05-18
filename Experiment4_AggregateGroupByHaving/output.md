@@ -1,119 +1,162 @@
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/c20e9827-6c28-41f5-9e31-81f9f5a45ea0)
 
 ```sql
--- Paste your SQL code below for Question 1
+select Medication ,count(*) as TotalPrescriptions
+from Prescriptions
+group by Medication
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/7f3c35f9-b2cd-4bef-9365-03517a00e5cb)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/b8a2649f-d2ab-40cd-ac97-dc991f9352aa)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+select DoctorID , count(*) as TotalPrescriptions
+from Prescriptions
+group by DoctorID
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/28271c15-e793-4ad2-a29b-d3e6a2eb7ffb)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/07ec12a2-0db3-4f8a-8c31-8b727190b285)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select avg(length((TRIM(name)))) as avg_name_length
+from customer
+where lower(city)='chennai';
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/c1a01ddc-875e-4db0-8e35-08442f129cdd)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/60c706d9-17bd-422f-bfad-e3784d1522af)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select name,max(income) as 'max(income)'
+from employee
+where city= 'California'
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/35a12f99-b7ed-427c-8637-d5f1e84478c6)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/1e62ac7c-bd05-49d4-afe6-6d53510d7eca)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+select sum(inventory) as 'total_available_amount'
+from fruits
+where price > 0.5
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/ed8453b2-a843-4207-9ac4-d26fa76d5437)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/440942bb-4b67-4ddd-8650-da08559b648d)
+
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select count(distinct city) as unique_cities
+from customer--
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/1ac22239-383c-4861-b2c9-acec7c828e3b)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/283b6a21-5125-4329-ad3c-0d523f694e8f)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select city,sum(Income) as Income
+from employee
+group by city
+having sum(income)>200000
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/0bc08419-781d-44fd-8383-c04af37b1b74)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/18dd1ca2-20de-4338-8424-d5fc457d6cad)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+select  (age/5)*5 as 'age_group',MIN(age) 
+from customer1
+group by age_group
+HAVING MIN(age)<25
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/408f5167-44f6-41c1-a3e8-38c41e6d38ff)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/94bde942-14a1-40e0-acb6-742f88b29384)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select category_id , sum(price) as Total_Cost
+from products
+group by category_id
+having sum(price)>50
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/da0d8905-6e09-4f83-bb98-70046914d99c)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/0d8e7338-8b4d-4c97-a586-092273b6cc88)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select address,AVG(salary)
+from customer1
+group by address
+having AVG(salary)>5000;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/7db45bd7-4094-4edc-9b0c-207f49ad85ed)
